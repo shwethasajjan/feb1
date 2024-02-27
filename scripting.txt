@@ -1,0 +1,90 @@
+comparion of string equal or not
+#!/bin/bash
+if [ "$#" -ne 2 ]
+then
+        echo " pass two aurguments"
+exit
+fi
+if [ $1 -eq $2 ]
+then
+        echo " given two numbers are equal"
+else
+        echo " given two numbers are not equal"
+
+fi
+--------------------------------------------------------------
+arthematic operations
+if [ "$#" -ne 2 ]
+then
+        echo " pass two aurguments"
+exit
+fi
+if [ $1 -eq $2 ]
+then
+        echo " $1 is equal to $2 "
+fi
+
+if [ $1 -gt $2 ]
+then
+        echo " $1 is greater than $2 "
+fi
+
+if [ $1 -lt $2 ]
+then
+        echo " $1 is lesser than $2"
+fi
+
+if [ $1 -ge $2 ]
+then
+        echo "$1 is greater than or equal to $2"
+fi
+
+if [ $1 -le $2 ]
+then
+        echo " $1 is less than or equal to $2"
+fi
+----------------------------------------------------------------
+compariosion of strings
+#!/bin/bash
+if [[ $1 = $2 ]]; then
+      echo "The strings are equal."
+   fi
+
+if [[ $1 != $2 ]]; then
+        echo "The strings are not equal."
+fi
+---------------------------------------------
+#!/bin/bash
+
+# Function to find the smallest number
+find_smallest() {
+    smallest=$1
+    for num in "$@"; do
+        if [ "$num" -lt "$smallest" ]; then
+            smallest=$num
+        fi
+    done
+    echo "Smallest number is: $smallest"
+}
+
+# Main script starts here
+
+# Check if at least one argument is provided
+if [ "$#" -eq 0 ]; then
+    echo "Usage: $0 <list of numbers>"
+    exit 1
+fi
+
+# Call the function to find the smallest number
+find_smallest "$@"
+-----------------------------------------------------------------
+smallest=$1
+
+# Loop through the numbers and find the smallest
+for num in "$@"; do
+    if [ "$num" -lt "$smallest" ]; then
+        smallest=$num
+    fi
+done
+echo "Smallest number is: $smallest"
+-------------------------------------------------------------------
